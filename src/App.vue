@@ -1,23 +1,25 @@
 <template>
   <div id="app">
-    <HelloWorld/>
+    <Home/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Home from './views/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Home,
   }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -1,0 +1,60 @@
+/* ============================================================================
+   SPACING
+   ========================================================================= */
+
+/**
+ * Spacing Sizes
+ */
+
+$spacing-unit: 8px;
+
+$spacing: (
+  1: $spacing-unit,
+  2: $spacing-unit * 2,
+  3: $spacing-unit * 4,
+  4: $spacing-unit * 8,
+  5: $spacing-unit * 16,
+);
+
+@function spacing($key) {
+  @return map-get($spacing, $key);
+}
+
+/**
+ * Spacing classes
+ *
+ * Examples:
+ *   padding-2
+ *   margin-sides-1
+ *   padding-ends-4
+ *   margin-bottom-2
+ */
+
+@for $unit from 1 through 5 {
+  @each $type in ('margin', 'padding') {
+
+    // All
+    .#{$type}-#{$unit} {
+      #{$type}: spacing($unit);
+    }
+
+    // Sides
+    .#{$type}-sides-#{$unit} {
+      #{$type}-left: spacing($unit);
+      #{$type}-right: spacing($unit);
+    }
+
+    // Ends
+    .#{$type}-ends-#{$unit} {
+      #{$type}-top: spacing($unit);
+      #{$type}-bottom: spacing($unit);
+    }
+
+    // Directions
+    @each $direction in ('top', 'right', 'bottom', 'left') {
+      .#{$type}-#{$direction}-#{$unit} {
+        #{$type}-#{$direction}: spacing($unit);
+      }
+    }
+  }
+}
