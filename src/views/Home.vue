@@ -1,8 +1,9 @@
 <template>
   <div class="home"
     :class="[{'home--show-us': showUs}]">
+    <headerNav></headerNav>
 
-    <div class="teaser-container">
+    <div id='home' class="teaser-container">
       <div class="teaser">
         <div class="teaser__title margin-bottom-1">
           {{ msg }}
@@ -10,41 +11,17 @@
         <div class="teaser__blurb margin-bottom-2">
           We're tying the knot
         </div>
-        <!-- <img src="./sections/knot.svg"> -->
         <knot/>
 
       </div>
     </div>
 
-<pre class="padding-ends-4" style="background-color: #EEE; margin: 0;">
-  BLOCKED ITEMS:
-   * Decide Start Time.
-   * Research best response form
-   * Create gift registry
-   * Profile Photos of wedding party (optional)
-
-  TODO:
-   * Create navigation
-   * Create map
-   * Write short story
-   * Animate story
-   * Format all copy
-   * Update reservation URL with codes
-
-  NAVIGATION:
-    Home
-    Info
-    RSVP
-    Story
-    Logistics
-    Registry
-</pre>
-    <info/>
-    <rsvp/>
-    <story/>
-    <logistics/>
-    <whosWho/>
-    <registry/>
+    <info id='info'/>
+    <rsvp id='rsvp'/>
+    <story id='story'/>
+    <logistics id='logistics'/>
+    <whosWho id='whoswho'/>
+    <registry id='registry'/>
 
   </div>
 </template>
@@ -57,6 +34,7 @@ import logistics from './sections/Logistics.vue';
 import whosWho from './sections/WhosWho.vue';
 import registry from './sections/Registry.vue';
 import knot from './sections/Knot.vue';
+import headerNav from './components/HeaderNav.vue';
 
 
 export default {
@@ -69,6 +47,7 @@ export default {
     whosWho,
     registry,
     knot,
+    headerNav,
   },
   data () {
     return {
@@ -84,7 +63,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import "../assets/styles/spacing.scss";
 @import "../assets/styles/settings.scss";

@@ -7,21 +7,31 @@
     theme="white"
     imageURL="https://lh3.googleusercontent.com/5tusO2DukyUHgr2pBONuyy0z32EIN4KdDfOvaRdJMOYh-BTOhjHjPGOb9NMkAztaj6ex3wlLBKqhryvL97mx1msRPUXo_ukfnlBDFV07M0kpoBiZUcO8zMIGEIDxo2E_yckv7stSdOOoapjezjkogKWFmZLynLUpGQAWe9y9cbAV3blVkkbGbOVCksVdQPs4T9QZklBlMyZETSOTlc4yEHW3ky-POXdIvN4IECQvd0TWlNZxrdYb_vv6zb2uiQCrlSl4EwG3CNytAXWhsoleRBTG1GaCl7eDIgeMFk8ZrF5IC4fbEeqw0xCHKQxT5Biv25btwgEXvLbndFYYVcGwcnnhZ_OiT1nlVAeaqCz7j3msf78HexpTdJgUx4lqlO0f9cY56AuviX1Xa5vQAH38v8sK-1LPv2MGQIJ9BseoXsRxeb5IlvzzyTqnWsI5ODyHwP0lFDlUnQa8CIwJnDlbGYjj2kGB3hUaVrT90KtEH0D8SuKCQK6iXGlK2Ts06Ozmw2X-PZA5XBFK7De_j6rBx_rfBrjFax6m9vSfW-kuIm0m9bAXEEei268VgBV3WHwWgBAIBYTrneZ3mZBmLY03e7qbTkL4I5_85euGWe7q80LLZ5LEA0r6q1kaeDtMXneKZGbnGhqsuDcs5ojFsVXnlDvwoZ44rWda=w2426-h1606-no">
   </hero>
-  <pre class="padding-ends-4" style="background-color: #EEE; margin: 0;">
-    Story
-      short story
-      photos
-      climbing easter eggs
-  </pre>
-
-
+  <div class="content-container padding-ends-4">
+    <div class="section__item">
+      <div class="section__item__title">
+        Story
+      </div>
+      <div>
+        short story
+      </div>
+      <div>
+        photos
+      </div>
+      <div>
+        climbing easter eggs
+      </div>
+    </div>
+  </div>
+  <div class="story-container">
+  <div class="story">
   <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
     viewBox="0 0 765 990"
     version="1.1"
     xmlns:cc="http://creativecommons.org/ns#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
-    style="width: 100vw;">
+    style="width: 100%;">
 
     <g transform="matrix(1.25,0,0,-1.25,0,990)">
       <path style="fill:#fff" d="m0 792"/>
@@ -369,6 +379,8 @@
 
     </g>
   </svg>
+  </div>
+  </div>
 </div>
 </template>
 
@@ -393,8 +405,8 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@import "../../assets/styles/settings.scss";
 
 /* Features */
 .path {
@@ -533,6 +545,24 @@ export default {
 }
 .sean-test:hover {
   fill: orange !important;
+}
+
+.story-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.story {
+  max-width: $container-width-large;
+  // margin: 0 auto;
+  flex-grow: 1;
+  min-width: 820px;
+  transform: translateX(-15%);
+
+  @media (min-width: $desktop) {
+    transform: translateX(0%);
+  }
+
 }
 
 .story__title {

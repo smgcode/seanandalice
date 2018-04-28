@@ -6,10 +6,13 @@
     theme="white"
     imageURL="https://res.cloudinary.com/seangee/image/upload/w_1440/v1524374180/273A4086.jpg">
   </hero>
-  <pre class="padding-ends-4" style="background-color: #EEE; margin: 0;">
-        Registry
-          BLOCKED: Zola
-  </pre>
+  <div class="content-container padding-ends-4">
+    <div class="section__item">
+      <div class="section__item__title">
+        Zola
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 

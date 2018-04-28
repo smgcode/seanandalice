@@ -7,12 +7,16 @@
     theme="white"
     imageURL="https://res.cloudinary.com/seangee/image/upload/w_1440/v1524379217/273A3833.jpg">
   </hero>
-  <pre class="padding-ends-4" style="background-color: #EEE; margin: 0;">
-    RSVP
-      Required: named people
-        BLOCKED: Need research on how to get people's responses.
-      Optional: Food restrictions: "Please let us know if you have any food restrictions."
-  </pre>
+  <div class="content-container padding-ends-4">
+    <div class="section__item">
+      <div class="section__item__title">
+        Kindly reply by September 7th 2018
+      </div>
+      <div>[ ] Accepts with pleasure</div>
+      <div class="margin-bottom-2">[ ] Declines with regret</div>
+      <div>Please let us know if you have any food restrictions.</div>
+    </div>
+  </div>
 </div>
 </template>
 

@@ -19,9 +19,11 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
 
 #app {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Avenir', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-wrap: break-word;
+  word-wrap: break-word
 }
 
 body {

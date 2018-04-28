@@ -30,6 +30,8 @@ export default {
   background-size: cover;
   background-position-y: 40%;
   background-position-x: 50%;
+  max-width: $container-width;
+  margin: 0 auto;
   height: 25vh;
   overflow: hidden;
 
@@ -52,7 +54,7 @@ export default {
 
 .hero {
   color: #333454;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;

@@ -7,22 +7,33 @@
     theme="white"
     imageURL="https://res.cloudinary.com/seangee/image/upload/w_1440/v1524374180/273A4086.jpg">
   </hero>
-  <pre class="padding-ends-4" style="background-color: #EEE; margin: 0;">
-    Who's who
-      Wedding Party
-        Bride: Alice Hsu
-        Groom: Sean Gee
-        Maid of Honor: Katharine Pan
-        Best Man: Alex Lee
-        Bridesmaid: Yvonne Yip
-        Groomsman: Johnny Yip
-        Bridesmaid: Jean Hsu
-        Groomsman: Steve Sin
-        Jr. Bridesmaid: Ariel Bigelow-Gee
-      Parents
+  <div class="content-container padding-ends-4">
+    <div class="section__item">
+      <div class="section__item__title">
+        Wedding Party
+      </div>
+      <pre>
+Bride: Alice Hsu
+Groom: Sean Gee
+Maid of Honor: Katharine Pan
+Best Man: Alex Lee
+Bridesmaid: Yvonne Yip
+Groomsman: Johnny Yip
+Bridesmaid: Jean Hsu
+Groomsman: Steve Sin
+Jr. Bridesmaid: Ariel Bigelow-Gee
+      </pre>
+      <div class="section__item__title">
+        Parents
+      </div>
+      <div>
         Wing & Tina Gee
+      </div>
+      <div>
         Jerry and Sharon Hsu
-  </pre>
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 
