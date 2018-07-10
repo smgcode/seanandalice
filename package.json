@@ -10,6 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "iframe-resizer": "^3.6.1",
     "node-sass": "^4.8.3",
     "sass-loader": "^7.0.1",
     "vue": "^2.5.2",

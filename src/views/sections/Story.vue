@@ -1,36 +1,36 @@
 <template>
 <div>
   <hero
-    title="RSVP"
-    subtitle="We hope you can make it"
+    title="Our Story"
+    subtitle="in case you're interested"
     position="down"
     theme="white"
-    imageURL="https://lh3.googleusercontent.com/5tusO2DukyUHgr2pBONuyy0z32EIN4KdDfOvaRdJMOYh-BTOhjHjPGOb9NMkAztaj6ex3wlLBKqhryvL97mx1msRPUXo_ukfnlBDFV07M0kpoBiZUcO8zMIGEIDxo2E_yckv7stSdOOoapjezjkogKWFmZLynLUpGQAWe9y9cbAV3blVkkbGbOVCksVdQPs4T9QZklBlMyZETSOTlc4yEHW3ky-POXdIvN4IECQvd0TWlNZxrdYb_vv6zb2uiQCrlSl4EwG3CNytAXWhsoleRBTG1GaCl7eDIgeMFk8ZrF5IC4fbEeqw0xCHKQxT5Biv25btwgEXvLbndFYYVcGwcnnhZ_OiT1nlVAeaqCz7j3msf78HexpTdJgUx4lqlO0f9cY56AuviX1Xa5vQAH38v8sK-1LPv2MGQIJ9BseoXsRxeb5IlvzzyTqnWsI5ODyHwP0lFDlUnQa8CIwJnDlbGYjj2kGB3hUaVrT90KtEH0D8SuKCQK6iXGlK2Ts06Ozmw2X-PZA5XBFK7De_j6rBx_rfBrjFax6m9vSfW-kuIm0m9bAXEEei268VgBV3WHwWgBAIBYTrneZ3mZBmLY03e7qbTkL4I5_85euGWe7q80LLZ5LEA0r6q1kaeDtMXneKZGbnGhqsuDcs5ojFsVXnlDvwoZ44rWda=w2426-h1606-no">
+    :imageURL="imageURL">
   </hero>
-  <div class="content-container padding-ends-4">
-    <div class="section__item">
-      <div class="section__item__title">
-        Story
-      </div>
-      <div>
-        short story
-      </div>
-      <div>
-        photos
-      </div>
-      <div>
-        climbing easter eggs
+
+  <div class="margin-bottom-5">
+    <div class="content-container">
+      <div class="section-border"></div>
+      <div class="section section--center padding-ends-2 padding-top-4">
+        <div class="section__item padding-bottom-4">
+          Insert story here.
+        </div>
+        <div class="section__item padding-bottom-3">
+          Dead men tell no tales quarterdeck hands bring a spring upon her cable rope's end crow's nest keel transom crimp brigantine long boat to go on account fluke booty. Cable long clothes avast bowsprit crow's nest boom doubloon me Pieces of Eight quarter bucko sheet careen stern. Hempen halter Brethren of the Coast flogging Sea Legs mizzenmast run a rig log Privateer Sink me belay Jack Tar aft loot code of conduct.
+        </div>
+        <div class="section__item padding-bottom-4">
+          Pillage lee Jolly Roger grog skysail transom Nelsons folly rum lass warp mizzen aft salmagundi lugger. Six pounders fluke provost gangway hands Barbary Coast hornswaggle swab landlubber or just lubber avast Cat o'nine tails spyglass plunder sutler. Nipperkin tackle yawl Corsair snow parrel bowsprit salmagundi Yellow Jack black jack heave down heave to pinnace hearties.
+        </div>
       </div>
     </div>
   </div>
+
   <div class="story-container">
   <div class="story">
   <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
     viewBox="0 0 765 990"
     version="1.1"
-    xmlns:cc="http://creativecommons.org/ns#"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
     style="width: 100%;">
 
     <g transform="matrix(1.25,0,0,-1.25,0,990)">
@@ -386,6 +386,9 @@
 
 <script>
 import hero from '../components/Hero.vue';
+import constants from '../constants.js';
+
+const imageURL = constants.heros.story;
 
 export default {
   name: 'Story',
@@ -394,6 +397,7 @@ export default {
   },
   data () {
     return {
+      imageURL,
       msg: 'Our Story'
     }
   },
@@ -551,6 +555,7 @@ export default {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  background-color: #FFFFFF;
 }
 .story {
   max-width: $container-width-large;

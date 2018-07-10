@@ -16,14 +16,14 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto+Slab:300,400,700');
 
 #app {
-  font-family: 'Avenir', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-wrap: break-word;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 
 body {

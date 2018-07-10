@@ -150,7 +150,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .knot {
     // transform: scale(2.0);
     // position: absolute;

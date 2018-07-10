@@ -5,39 +5,70 @@
     subtitle="Where to go and when to be there"
     position="up"
     theme="white"
-    imageURL="https://res.cloudinary.com/seangee/image/upload/w_1440/v1524374180/273A4086.jpg">
+    :imageURL="imageURL">
   </hero>
-  <div class="content-container padding-ends-4">
-    <div class="temp">
-      BLOCKED ITEMS:
-        <ul>
-          <li v-for="block in blocked">
-            {{ block }}
-          </li>
-        </ul>
-      TODO:
-      <ul>
-        <li v-for="todo in todos">
-          {{ todo }}
-        </li>
-      </ul>
+  <div class="content-container">
+    <div class="section-border">
     </div>
+    <div class="section section--center padding-ends-5">
+      <div class="section__item">
+        Please join us on
+      </div>
+      <div class="section__item section__item--primary">
+        September 29<span style="vertical-align: super; font-size: 30px">th</span> 2018
+      </div>
+      <div class="section__item section__item--secondary margin-bottom-4">
+        3:30 PM
+      </div>
+      <div class="section__item">
+        at the
+      </div>
+      <div class="section__item section__item--primary">
+        Pinecrest Chalet
+      </div>
+      <div class="section__item section__item--secondary margin-bottom-4">
+        500 Dodge Ridge Rd,<br> Pinecrest, CA 95364
+      </div>
 
-    <div class="section__item" v-for="(infoValue, infoKey) in info">
-      <div class="section__item__title">
-        {{ infoKey }}:
+      <div class="section__item margin-bottom-3">
+        Festivities will be held outdoors in the amphitheater surrounded by evergreens with the Toulumne creek flowing behind it. Under the night sky temperatures can reach down to the mid 40's (°F).<br>Dress code is cocktail attire
       </div>
-      <div>
-        {{ infoValue }}
+
+      <div class="section__item section__item--primary margin-bottom-1">
+        Schedule
       </div>
+      <div class="section__item padding-bottom-1">
+        <div class="schedule-container">
+          <div class="schedule">
+            <div class="margin-bottom-2">
+              3:30 pm Ceremony
+            </div>
+            <div class="margin-bottom-2">
+              4:00 pm Cocktail Hour
+            </div>
+            <div class="margin-bottom-2">
+              5:00 pm Reception
+            </div>
+            <div class="margin-bottom-2">
+              7:00 pm Dancing
+            </div>
+          </div>
+        </div>
+        <div class="subtext padding-1 margin-bottom-1">
+          * Please arrive early as the Ceremony will start promptly.
+        </div>
+      </div>
+
     </div>
-
   </div>
 </div>
 </template>
 
 <script>
 import hero from '../components/Hero.vue';
+import constants from '../constants.js';
+
+const imageURL = constants.heros.info;
 
 export default {
   name: 'Info',
@@ -46,19 +77,18 @@ export default {
   },
   data() {
     return {
+      imageURL,
       blocked: [
-        'Decide Start Time.',
         'Research best response form',
         'Create gift registry',
-        'Profile Photos of wedding party (optional)'
+        'Decide Start Time.',
+        'Profile Photos of wedding party (optional)',
       ],
       todos: [
-        'Create navigation',
-        'Create map',
+        'Format all copy',
+        'Update reservation URL with codes',
         'Write short story',
         'Animate story',
-        'Format all copy',
-        'Update reservation URL with codes'
       ],
       info: {
         date: 'September 29th 2018',
@@ -76,5 +106,13 @@ export default {
 <style lang="scss">
 @import "../../assets/styles/settings.scss";
 @import "../../assets/styles/base.scss";
+.schedule-container {
+  max-width: max-content;
+  margin: 0 auto;
+}
+
+.schedule {
+  text-align: left;
+}
 
 </style>

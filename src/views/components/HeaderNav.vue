@@ -42,12 +42,6 @@
               2.3C30.7,57,
               38.4,58.2,
               38.4,58.2z"/>
-            <line class="st2" x1="
-              39.4" y1="56.1" x2="
-              30.1" y2="54.5"/>
-            <line class="st2" x1="
-              39.5" y1="55.7" x2="
-              30.1" y2="54.1"/>
             <path class="st2" d="
             M40.7,48.7c0,0-2.6-0.9-4.7-1.2c-2.9-0.4-4.5-0.5-4.5-0.5"/>
           </g>
@@ -93,10 +87,10 @@ export default {
           name: 'RSVP',
           hash: 'rsvp',
         },
-        {
-          name: 'Story',
-          hash: 'story',
-        },
+        // {
+        //   name: 'Story',
+        //   hash: 'story',
+        // },
         {
           name: 'Logistics',
           hash: 'logistics',
@@ -125,7 +119,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../assets/styles/settings.scss';
 
 .st0{fill:#CCC;stroke:#1A171B;stroke-width:0.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
@@ -134,12 +128,20 @@ export default {
 .st3{fill:#FFFFFF;stroke:#1A171B;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 .st4{fill:none;stroke:#1A171B;stroke-width:0.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 
+.st0--right {
+  fill: #7c52d8;
+}
+
 .header-nav-container {
   position: fixed;
   width: 100vw;
   background-color: rgba(50, 50, 50, 0.7);
-  z-index: 1;
-  transition: all 1s ease-in-out;
+  z-index: 11;
+  transition:
+    box-shadow 1s ease-in-out,
+    background-color 1s ease-in-out,
+    opacity 1s ease-in-out,
+    visibility 1s ease-in-out;
 
   a {
     color: white;
@@ -158,7 +160,7 @@ export default {
   text-transform: uppercase;
   max-width: $container-width;
   margin: 0 auto;
-  font-size: 8px;
+  font-size: 12px;
 
   @media (min-width: $desktop) {
     font-size: 20px;
@@ -173,5 +175,6 @@ export default {
   box-shadow: none;
   background-color: rgba(30, 15, 61, 0);
   opacity: 0;
+  visibility: hidden;
 }
 </style>
